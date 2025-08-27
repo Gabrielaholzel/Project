@@ -1,0 +1,204 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+@import url('https://api.fontshare.com/v2/css?f[]=Hollanda@400');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/* Header styling */
+header {
+    background-color: #494949;
+    position: fixed; /* stays at top when scrolling */
+    width: 100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.7); /* dark overlay */
+}
+
+/* Nav styling */
+nav {
+    margin: 0;
+    padding: 20px 40px; /* add some side padding */
+    display: flex;
+    align-items: center;
+}
+
+/* UL becomes flex container */
+nav ul {
+    display: flex;
+    flex: 1; /* take all available space */
+    align-items: center;
+    justify-content: center; /* center the links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem; /* space between links */
+}
+
+/* LI for links */
+nav li {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+
+/* Buttons container to align right */
+.nav-buttons {
+    margin-left: auto; /* push buttons to the right */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Button styling */
+#theme-toggle,
+#fontsize-minus,
+#fontsize-plus {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff; /* always white */
+    outline: none;
+}
+
+
+main h1 {
+    color: #ffffff;
+    font-size: 70px;
+    margin-top: 0px;
+    padding-top: 80px;
+    text-align: center;
+}
+
+main h2 {
+    color: #ffffff;
+    font-size: 40px;
+    margin-top: 0px;
+    padding-top: 80px;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+  
+.pictureAbout {
+    height: 600px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                url('https://media.nomadicmatt.com/2022/argentinaguide4.jpg') center/cover no-repeat;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Hollanda', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    align-content: center;
+    text-align: center;
+  }
+.pictureAbout a {
+    font-family:'Lato', sans-serif;
+    font-size: 30px;
+}
+
+
+.pictureHome {
+    height: 600px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                url('https://www.voyagers.travel/_ipx/w_2400&f_webp&q_85/google/travel-web-app-1.appspot.com/flamelink/media/Ciudad%20de%20buenos%20aires%20-%20Canva%20-%20mihtiander.jpg%3Falt=media') center/cover no-repeat;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Hollanda', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    align-content: center;
+    text-align: center;
+  }
+
+.pictureBlog {
+    height: 600px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                url('https://www.frobeen.de/images/jch-optimize/ng/images_Argentinien_Startbild_Argentinien__Wasserfall.webp') center/cover no-repeat;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Hollanda', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    align-content: center;
+    text-align: center;
+  }
+.pictureBlog p {
+    font-family:'Lato', sans-serif;
+}
+
+
+.pictureContact {
+    height: 600px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                url('https://worldfootprints.com/wp-content/uploads/2025/03/Tulip-festivals-Kashmir.jpg') center/cover no-repeat;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Hollanda', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    align-content: center;
+    text-align: center;
+}
+
+.pictureContact p {
+    font-family:'Lato', sans-serif;
+}
+
+:root {
+    --font-size-base: 1rem; /* Default */
+    --grid-unit: 1rem;
+    --border-radius-base: 0.5rem;
+}
+
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+
+[data-theme="dark"] {
+  --color-bg: #000000;
+  --color-fg: #ffffff;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-size: var(--font-size-base);
+}
+
+#theme-toggle, #fontsize-minus, #fontsize-plus  {
+  font-size: 1.2rem;       /* Makes the emoji bigger */
+  background: none;        /* Removes grey background */
+  border: none;            /* Removes border */
+  cursor: pointer;         /* Changes cursor on hover */
+  outline: none;           /* Removes focus outline */
+  transition: transform 0.2s; /* Smooth hover effect */
+  padding: 0.3rem 0.6rem;
+}
+
+#fontsize-minus,
+#fontsize-plus {
+  color: white; /* Always white */
+}
+
+.blogForm, .contentAbout, #form {
+    padding: 20px;
+}
